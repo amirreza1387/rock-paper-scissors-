@@ -6,6 +6,8 @@ while couantall<=0 :
 
     options = ["rock","paper","scissors"]
 
+    countlog=0
+
     cmp=0
 
     player=0
@@ -23,11 +25,11 @@ while couantall<=0 :
       userr= input("username :")
       passrr= input("password :")
       if userr==user and passrr==passw:
-        
-        print("login succesful")
+         countlog += 1
+         print("login succesful")
       
-        count= int(input("sar chanta????"))
-        while True :
+         count= int(input("sar chanta????"))
+         while countlog >= 0 :
                          
             player_ch= input("""
 
@@ -38,7 +40,7 @@ while couantall<=0 :
             print ("""you chose:""" , player_ch)
             print ("""opponet chose:""" , computer_ch)
                     
-                    #_______if________#
+                    
             if player_ch==computer_ch :
              print("round raw!  ")
              print (f"{player}:{cmp}")
@@ -82,14 +84,14 @@ while couantall<=0 :
                 you lost the mach {player}:{cmp} """)
              break        
         
-        break           
-     if  userr!=user or passrr!=passw: 
+                   
+     if  userr!=user and passrr!=passw: 
         print("login unsiccessfull")  
         countlog += 1 
-        couantall += 1
+        
         print (f"{countlog}/ 3")
         if countlog >= 3:
-                
+                  couantall += 1
                   break   
             
       
@@ -104,7 +106,6 @@ while couantall<=0 :
                      print ("create an account")
                      user1= input("create username :")
                      passw1= input("create password :")
-       
 
 
 
