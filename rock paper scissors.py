@@ -158,10 +158,13 @@ while couantall<=0 :
                         [game started]
                          -----------
                         """)\
-                        
+                        #________main game____#
                         count= int(input("sar chanta????"))
                     while countlog >= 0 :
                             
+
+                        #_______getting player choice______#
+
                          player_ch= input("""
 
                          chose rock , paper or scissors : """)
@@ -171,7 +174,7 @@ while couantall<=0 :
                          print ("""you chose:""" , player_ch)
                          print ("""opponet chose:""" , computer_ch)
                                 
-                                
+                            #__if: chosing winner round___#    
                          if player_ch==computer_ch :
                             print("round raw!  ")
                             print (f"{player}:{cmp}")
@@ -194,7 +197,7 @@ while couantall<=0 :
                             print ("enter  vaild choise ")
                                     
 
-                                #_______if2________#
+                                #_______if: chosing match winner________#
                          if player==count :
 
                             print (f"""
@@ -225,4 +228,4 @@ while couantall<=0 :
                 print ("""
     answer me with yes or no !
                 """)
-                break            
+                break           
