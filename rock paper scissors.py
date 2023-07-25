@@ -1,4 +1,4 @@
- countlog = 0
+countlog = 0
 countlog2=0
 couantall=0
 save=open("userpass.txt","+a")
@@ -21,6 +21,7 @@ while couantall<=0 :
     #_________define______#
     quastion=input("do you have an account? yes/no : ")
     while countlog <= 2 :
+        #______if: login/register______#
         if quastion == ("yes"):
             print ('''
             -----------
@@ -29,13 +30,14 @@ while couantall<=0 :
            ''' )
             userr= input("username :")
             passrr= input("password :")
+            #________run game if loggin succes______#
             if userr==user and passrr==passw:
                 print("login succesful")
-        
+                #______main game______#
                 count= int(input("sar chanta????"))
                 
                 while countlog >= 0 :
-                                
+                    #_______getting player choice______#
                     player_ch= input("""
 
                     chose rock , paper or scissors : """)
@@ -47,7 +49,7 @@ while couantall<=0 :
                     you chose:""" , player_ch)
                     print ("""opponet chose:""" , computer_ch)
                             
-                            
+                    #_____if: winner round_____#        
                     if player_ch==computer_ch :
                      print("round raw!  ")
                      print (f"{player}:{cmp}")
@@ -70,7 +72,7 @@ while couantall<=0 :
                         print ("enter  vaild choise ")
                                 
 
-                            #_______if2________#
+                            #_______if: chosing the winner________#
                     if player==count :
                      print (f"""
                      
@@ -91,14 +93,15 @@ while couantall<=0 :
                      countlog+= 3
                      couantall+= 1
                      break
-             
+             #________if: close code with 3 faile________#
             if  userr!=user and passrr!=passw: 
                     print("login unsuccesfull")  
                     countlog += 1 
-            
+
                     print (f"{countlog}/ 3")
+                    #______if: close whole code_____#
                     if countlog >= 3:
-                         print("you tried many times")
+                         print("you tried many times !")
                          couantall += 1      
                
                         
@@ -119,9 +122,11 @@ while couantall<=0 :
                     user1= input("create username :")
                     passw1= input("create password :")
                     passw11= input("enter password again :")
+                    #__close code if user=hackr or user=password__#
                     if user1 == "hacker" or passw1=="hacker" :
                         print ("you are a hacker ? suck my d.ck [: ")
-                        couantall += 1      
+                        couantall += 1 
+                        countlog2 += 10     
                         break
                     elif user1==passw1:
                         print("""
@@ -129,14 +134,15 @@ while couantall<=0 :
                         """)
                         couantall += 1
                         break
-
+                    #____if: register unsucces____#
                     if passw1 != passw11 :
                     
                         countlog2+=1
                         print (f"""passwords are not the same ! 
-{countlog2} / 3""")
+{countlog2} / 3""") 
+                        #___if: close code 3 tryes____#
                         if countlog2 == 3:
-                            print("you tried many times")
+                            print("you tried many times !")
                             couantall +=10
                         break
 
@@ -151,7 +157,8 @@ while couantall<=0 :
                          -----------
                         [game started]
                          -----------
-                        """)
+                        """)\
+                        
                         count= int(input("sar chanta????"))
                     while countlog >= 0 :
                             
@@ -218,4 +225,4 @@ while couantall<=0 :
                 print ("""
     answer me with yes or no !
                 """)
-                break  
+                break            
